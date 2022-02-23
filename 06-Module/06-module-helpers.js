@@ -1,9 +1,17 @@
-// soal - 01
+function sayHello() {
+    console.log("Hello");
+  }
 
-export default function sayHallo(){
-    console.log("Hello")
-}
+  export default sayHello();
 
-export function greeting(name){
-    alert(`Hello  ${name}`);
-}
+
+  const elFormGreeting = document.querySelector("#form-greeting");
+  const btn = elFormGreeting.lastElementChild
+  const elInputName = document.querySelector("#input-name");
+
+  btn.onclick = greeting
+
+  export function greeting (){
+    var message = elInputName.value
+    alert(`Hello, ${message}`)
+  }
